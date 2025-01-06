@@ -24,7 +24,7 @@ class Post(models.Model):
 
 
     class Meta:
-        ordering = ("-publish")
+        ordering = ("-publish", )
 
     def __str__(self):
         return self.title
@@ -39,5 +39,5 @@ class Post(models.Model):
                                                         self.publish.slug])
 
 posts = Post.objects.filter(status = "published")
-p_posts = Post.published.all()
+
 
